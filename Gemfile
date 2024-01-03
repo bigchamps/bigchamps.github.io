@@ -2,10 +2,7 @@ source "https://rubygems.org"
 
 gem 'jekyll', '~> 4.3.2'
 gem 'bundler', '~> 2.3.7'
-gem 'faraday-retry'
-gem 'backports', '~> 3.23'
 gem 'kramdown'
-gem 'puma'
 
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -14,8 +11,6 @@ gem 'puma'
 
 # Plugins
 group :jekyll_plugins do
-    # gem 'devlopr', '~> 0.4.5'
-    
     gem 'jekyll-feed', '~> 0.17.0'
     gem 'jekyll-paginate', '~> 1.1.0'
     gem 'jekyll-gist', '~> 1.5.0'
