@@ -215,7 +215,7 @@ header {
 /* bootstrap override */
 .container-fluid {
     padding: 0px !important;
-    width: fit-content !important;
+    width: max-content !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
     margin-top: 10px !important;
@@ -451,11 +451,22 @@ header {
 
 .jumbotron-heading{
     font-size: 35px;
+    width: fit-content;
+    background-color: #1c1c1e;
+}
+
+.my_center {
+    width: 100vw;
+    display: grid;
+    place-items: center;
 }
 
 .lead {
     font-size: 1.30rem !important;
     font-weight: 600;
+    background-color:#1c1c1e;
+    width: fit-content;
+    
 }
 
 .fa {
@@ -551,6 +562,7 @@ header {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 50fr 4fr;
+    
 }
 
 #recent-articles,#recent-projects{
@@ -564,13 +576,15 @@ header {
 }
 
 #article-img, #article-link, #article-alert {
-    padding-left: 5px;
-    padding-top: 2px;
-    margin: 5px;
+    padding: 5px;
+    text-align: start;
 }
+
 .recent-article-link{
     font-size: 20px;
     text-decoration: none;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .article-card-link, .article-card-link:hover{
     text-decoration: none;
@@ -650,6 +664,7 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .blog-post {

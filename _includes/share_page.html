@@ -1,36 +1,10 @@
 <!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-  (function(d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, "script", "facebook-jssdk");
-</script>
-  <script
-  async
-  src="https://platform.twitter.com/widgets.js"
-  charset="utf-8"
-></script>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0&appId=651824621600320" nonce="jgl7TTLu"></script>
 <div class="share-page">
-  <p class="share-text">Share this on &rarr;</p>
-  <a
-    href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-    class="twitter-share-button"
-    data-size="large"
-    data-show-count="false"
-    style="margin-top:5px;"
-    >Tweet</a
-  >
-  <a
-    class="fb-share-button"
-    data-href="{{site.url}}{{page.url}}"
-    data-size="large"
-    data-layout="button"
-  >Share</a>
+    <div class="fb-share-button" data-layout="" data-size=""><a target="_blank" href="{{site.baseurl}}{{page.url}}" class="fb-xfbml-parse-ignore"></a></div>
+
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+    <script type="IN/Share" data-url="{{site.baseurl}}{{page.url}}"></script>
 </div>
