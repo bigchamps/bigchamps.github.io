@@ -120,7 +120,7 @@ ol, ul {
     width: 100%;
     overflow: hidden;
     z-index: 1;
-    margin-top: 25px;
+    margin-top: 0px;
 }
 
 body {
@@ -176,23 +176,14 @@ blockquote {
 
  /* width */
  ::-webkit-scrollbar {
-    width: 10px;
+    display: none;
  }
 
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background:  rgb(28, 28, 30);;
-  }
+html, body {
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #212529;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #333;
-  }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--bold-color) !important;
@@ -456,7 +447,7 @@ header {
 }
 
 .my_center {
-    width: 100vw;
+    width: 100%;
     display: grid;
     place-items: center;
 }
@@ -664,7 +655,7 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .blog-post {

@@ -1,13 +1,14 @@
+<script src="{{site.url}}{{site.baseurl}}/assets/js/typewrite.js"></script>
+
 <style>
     /* change cover_img in config.yml */
     .jumbotron {
         background-color: var(--main-background-color) !important;
         background-image: url('/assets/img/{{site.hero_cover_img}}');
         text-align: center;
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-size: cover;
         background-position: center;
-
     }
 
     .jumbotron-btns {
@@ -19,22 +20,33 @@
     .lead {
         color: #fff;
     }
+
+    .typewrite2  {
+        display: table-row;
+        background-color: #1c1c1e;
+        text-align: center;
+        color: #fff !important;
+        padding-top: 10em;
+    }
+
 </style>
 
 <!-- home hero section -->
 <div class="jumbotron">
     <img class="author-profile-img" src="{{site.url}}{{site.baseurl}}/assets/img/{{site.author_logo}}" />
-    <div class="my_center"><p class="jumbotron-heading">My name is {{site.author}} !</p></div>
-    
+    <!-- <div class="my_center">
+        <p class="jumbotron-heading">My name is {{site.author}} !</p>
+    </div> -->
 
-    <div class="my_center"><p class="lead" id="typewriteText"></p></div>
-    <span >
 
-    </span>
-    <!-- uncomment/modify buttons as you want-->
-    <div class="jumbotron-btns">
-        <!--<a href="{{site.url}}{{site.baseurl}}/get-started">
-      <button class="btn btn-md btn-warning"> <strong>Get Started</strong> </button>
-    </a>-->
+    <!-- <div class="my_center"><p class="lead" id="typewriteText"></p></div> -->
+    <div class="my_center">
+        <h3>
+            <a href="" class="typewrite2" data-period="2000"
+                data-type='[ "Hello!", "My name is {{site.author}}", "I am a tech lover", "An adventurous traveller", "and I like to make things" ]'>
+                <span class="wrap"></span>
+            </a>
+        </h3>
     </div>
+
 </div>
