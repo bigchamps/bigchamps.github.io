@@ -3,7 +3,7 @@ subtitle: Software Engineer
 description: >- # this means to ignore newlines until "baseurl:"
   Description
 
-url: " " # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
@@ -14,8 +14,6 @@ urls:
       url: /about
     - text: Blog
       url: /blog
-    - text: Gallery
-      url: /gallery
     - text: Contact
       url : /contact
 
@@ -24,36 +22,40 @@ urls:
 
 author_logo: profile.png
 author: Hoang Dang
-author_bio: Hi, my name is Hoang
+author_bio: A software enginner with 10 years experiences
 author_email: "hoangdang.eng@gmail.com"
 author_location: Canada
-author_website_url: "https://bigchamps.github.io/"
-typewrite-text: ["I'm a tech enthusiast", "adventurous traveller", "Serial hobbyist"]
+author_website_url: "https://hoangdang.dev"
+typewrite-text: 
 hero_cover_img: cover.jpg 
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
+            - company_name: Unity Technologies
+              company_logo: unity.png
               company_url: https://unity.com/
-              designation: Software Engineer
-              description: Worked on various Google Products
+              designation: Senior Software Developer
+              description: Developed automation framework and cloud implementation for robotic simulation. Worked on Pixyz software
               visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
+            - company_name: General Motors
+              company_logo: gm.png
+              company_url: https://www.gm.ca/en/home.html
+              designation: Software Engineer
+              description: Worked on android base infotainment system
               visibility: true
 
 # Education
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: ryerson.jpg
+                college_name: Ryerson University
+                college_url: 
+                college_degree: Bachelor of Engineering (Electrical)
+                description: 
                 visibility: true
+
+skills:
+  - Python, C#, C++, Kotlin, Java, C, Bash
+  - Docker, GCP, Azure, Jenkins, Selenium, Grafana, Qt, SQLite, Postgres, UI/UX design, Git, Embedded programming, Unity, Blender, 3D printing
 
 # Projects
 author_project_details:
