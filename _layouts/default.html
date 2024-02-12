@@ -1,25 +1,14 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
-{%- include head.html -%}
-<body>
-        {%- include header.html -%}
-        <div class="main-container">
-            {{ content }}
-        </div>
-        {%- include footer.html -%}
-     <!-- <script>
-            var options = {
-                classname: 'progressline',
-                id: 'my-id'
-            };
-            var nanobar = new Nanobar( options );
-            nanobar.go( 30 );
-            nanobar.go( 76 );
-            nanobar.go(100);
-    </script> -->
+<script src="https://cdn.tailwindcss.com"></script>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="text-center text-red-500 text-2xl">Hello World</div>
+    {{ content }}
   </body>
 </html>
