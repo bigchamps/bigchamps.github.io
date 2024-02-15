@@ -18,6 +18,11 @@ export default {
                     letterSpacing: '-0.01em',
                     fontWeight: '500',
                 }],
+                'floating': ['3rem', {
+                    lineHeight: '3.5rem',
+                    letterSpacing: '0.2em',
+                    fontWeight: '500',
+                }],
             },
             keyframes: {
                 typing: {

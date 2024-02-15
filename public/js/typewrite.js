@@ -58,7 +58,6 @@ window.addEventListener("load", (event) => {
         var toRotate = elements[i].getAttribute('data-type');
         var period = elements[i].getAttribute('data-period');
         var keeplast = elements[i].getAttribute('keep-last');
-        console.log(elements[i])
         if (toRotate) {
             new TxtType(elements[i], JSON.parse(toRotate), period, keeplast);
         }

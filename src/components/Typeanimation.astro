@@ -23,7 +23,7 @@ const blink = custom_class + " "
 <script>
 var elem = document.querySelector('#typing') as HTMLElement;
 var cursor = document.querySelector('#cursor') as HTMLElement;
-console.log(elem)
+
 let text = elem.getAttribute('type-text')
 let speed = Number(elem.getAttribute('type-speed'))
 
@@ -31,7 +31,7 @@ typing(text, speed)
 
 
 
-function typing(text, speed, i=0){
+function typing(text:string, speed:Number, i=0){
     if (i<text.length){
         elem.textContent += text[i];
         setTimeout(()=>typing(text,speed, i+1), speed)

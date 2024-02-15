@@ -1,0 +1,26 @@
+---
+const {text_size="3rem", m="0px"} = Astro.props
+let m_mod = `margin-left:${m};`
+
+---
+
+
+<div  class="floatText text-floating font-bold text-amber-600 my-36" style={m_mod}>
+    <slot />
+</div>
+
+
+<style>
+
+    .floatText.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+    .floatText {
+        opacity: 0;
+        transform: translateX(500px);
+        padding: 0.5rem;
+        transition: 2s;
+    }
+</style>

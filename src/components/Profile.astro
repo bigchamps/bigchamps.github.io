@@ -1,8 +1,54 @@
 ---
+// Software engineer
 // 9 years experience
 // Test automation
 // Backend
 // Fullstack
 // Android dev
 // Game dev
+import FloatingText from "../components/FloatingText.astro"
 ---
+
+<FloatingText>
+    Software engineer
+</FloatingText>
+
+<FloatingText m = "20vw">
+    9 years experiences
+</FloatingText>
+<FloatingText m = "10vw">
+    Unity: Gaming
+</FloatingText>
+
+<FloatingText m = "40vw">
+    General Motors: Automotive
+</FloatingText>
+
+<FloatingText m = "30vw">
+    Aversan: Aviation
+</FloatingText>
+
+<script>
+
+    const cards = document.querySelectorAll(".floatText");
+    let observer_option = {
+        threshold: 0,
+        rootMargin: "-120px",
+    }
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+
+                entry.target.classList.toggle("show", entry.isIntersecting);
+
+            });
+        },
+        observer_option
+
+    );
+    cards.forEach((card) => {
+        observer.observe(card);
+    });
+
+</script>
+

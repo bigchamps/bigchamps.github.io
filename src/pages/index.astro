@@ -1,13 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
+import Hero from "../components/Hero.astro";
+import Profile from "../components/Profile.astro";
+import Blank from "../components/Blank.astro";
 ---
 
 <Layout title="Welcome to Astro." >
 
-        <Main>
-
-        </Main>
+        <Hero />
+        <Blank height = 50vh />
+        <Profile/>
+        <Blank height = 30vh />
+        <Main/>
+        
 
 </Layout>
 
+<style>
+    .blank {
+        height: 30vh;
+    }
+</style>
