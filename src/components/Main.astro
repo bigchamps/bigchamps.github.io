@@ -1,0 +1,79 @@
+---
+import Hero from "../components/Hero.astro";
+import Typing from "./Typeanimation.astro";
+---
+
+<Hero />
+
+<div class="flex flex-col gap-1 items-start">
+    <div class="observe-card text-lg">9 years experiences</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+    <div class="observe-card">asadlfkjasldfj</div>
+</div>
+
+
+<style>
+
+    .observe-card.show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .observe-card {
+        opacity: 0;
+        border: 1px solid black;
+        border-radius: 0.25rem;
+        transform: translateX(100px);
+        background: white;
+        padding: 0.5rem;
+        transition: 150ms;
+    }
+</style>
+
+<script>
+
+    const cards = document.querySelectorAll(".observe-card");
+    let observer_option = {
+        threshold: 0,
+        rootMargin: "-120px",
+    }
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+
+                entry.target.classList.toggle("show", entry.isIntersecting);
+
+            });
+        },
+        observer_option
+
+    );
+    cards.forEach((card) => {
+        observer.observe(card);
+    });
+
+</script>

@@ -2,10 +2,21 @@
 import SidebarIcon from "../components/SidebarIcon.astro"
 ---
 
-<div class="fixed top-0 h-screen w-16 m-0 flex flex-col bg-stone-900 text-white shadow-lg">
-    <SidebarIcon href="/" icon="ic:baseline-home" text="Home 🏠" />
-    <SidebarIcon icon="ic:baseline-notifications-active" text="Current Project 🔧"/>
-    <SidebarIcon href="/blog" icon="ic:baseline-forum" text="Blog 📖"/>
-    <SidebarIcon icon="ic:baseline-person" text="Profile"/>
-    <SidebarIcon icon="ic:baseline-email" text="Mail 📖"/>
+<div id="sidebar" class="sb fixed bottom-4 min-w-full flex justify-center z-10">
+    <div class="bottom-4 flex rounded-full  bg-stone-900 bg-opacity-70 text-white shadow-lg">
+        <SidebarIcon href="/" icon="ic:baseline-home" text="Home 🏠" />
+        <SidebarIcon icon="ic:baseline-notifications-active" text="Current Project 🔧"/>
+        <SidebarIcon href="/blog" icon="ic:baseline-forum" text="Blog 📖"/>
+        <SidebarIcon icon="ic:baseline-person" text="Profile"/>
+        <SidebarIcon icon="ic:baseline-email" text="Mail 📖"/>
+    </div>
 </div>
+
+<script>
+    var sidebar = document.querySelector('#sdf') as HTMLElement;
+    if(sidebar){
+        sidebar.style.visibility = "visible"
+        sidebar.classList.add("slideInAnimation")
+    }
+    
+</script>

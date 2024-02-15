@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon/components'
+import Typeanimation from './Typeanimation.astro'
+---
+
+<div id="hero" class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white m-4 text-base" >
+    <div class="grid-cols-subgrid col-span-2">
+
+
+    
+        <p class="text-sky-500 animate-wiggle-2">  Hello 👋 my name is </p>
+        <Typeanimation speed=150 text="Hoang Dang" custom_class="font-bold text-myname text-sky-200 font-quirlycues"/>
+        <p class="font-bold text-3xl text-sky-500">
+            I build software solution and automate things <Icon name="ic:baseline-settings" class="size-10 inline animate-spin-slow"/>
+        </p>
+        <br>
+
+    </div>
+    <div></div>
+    <div></div>
+    <div class="flex justify-center">
+
+    </div>
+
+
+    <div class="flex justify-end">
+        <button class="self-center bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 h-11 border-b-4 border-blue-700 hover:border-blue-500 rounded-xl"> 
+            Start
+        </button>
+        <Icon name ="line-md--chevron-small-triple-left" class="size-28 text-gray-700"/>
+        <div class="bg-sky-600 rounded-full">
+            <object type="image/svg+xml" data="svg/profile_animated.svg" class="size-28 "></object>
+        </div>
+        
+    </div>
+</div>
+
+
+
+

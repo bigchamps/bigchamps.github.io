@@ -1,0 +1,47 @@
+---
+interface Props {
+    text: string;
+    speed: string;
+    custom_class?: string;
+}
+
+const { text, speed, custom_class} = Astro.props;
+const blink = custom_class + " "
+---
+
+<span id="typing" class={custom_class} type-text = {text}  type-speed= {speed}>
+
+</span>
+
+<span id="cursor" class={blink}>_</span>
+
+
+
+
+
+
+<script>
+var elem = document.querySelector('#typing') as HTMLElement;
+var cursor = document.querySelector('#cursor') as HTMLElement;
+console.log(elem)
+let text = elem.getAttribute('type-text')
+let speed = Number(elem.getAttribute('type-speed'))
+
+typing(text, speed)
+
+
+
+function typing(text, speed, i=0){
+    if (i<text.length){
+        elem.textContent += text[i];
+        setTimeout(()=>typing(text,speed, i+1), speed)
+    }else{
+        cursor.remove()
+    }
+}
+
+function deleting(text,speed, time){
+
+}
+
+</script>

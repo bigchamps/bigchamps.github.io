@@ -1,0 +1,5 @@
+ <p >
+            9 years experience... <br>
+            A generalist with a lot of experience on building test automation system, tools and cloud integrations. <br>
+            Starting in Embedded system ... Got into Aviation software then move to Automotive on Android side. Most current is a part of Unity working on distributed rendering for simulation
+        </p>
