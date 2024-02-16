@@ -7,31 +7,63 @@
 // Android dev
 // Game dev
 import FloatingText from "../components/FloatingText.astro"
+import { Icon } from "astro-icon/components";
 ---
-
-<FloatingText moving="true">
-    Software engineer
+<div id="profile" >
+<FloatingText>
+    <p class = "floatTextMoveL pl-10 my-[20vh]">
+        Software engineer
+    </p>
 </FloatingText>
 
-<FloatingText m = "20vw">
-    9 years experiences
-</FloatingText>
-<FloatingText m = "10vw">
-    Unity: Gaming
+<FloatingText>
+    <p class = "floatText pl-[10vw] my-[20vh]">9 years experiences</p>
 </FloatingText>
 
-<FloatingText m = "0vw">
-    General Motors: Automotive
+
+<FloatingText>
+    <p class = "floatText pl-[40vw] mt-[20vh] tracking-wide">
+        Unity - Gaming
+    </p>
+    
+</FloatingText>
+<FloatingText moving="true"  >
+    <a class="floatTextMoveR mt-[10vh] ml-3 sm:ml-[70vh]  max-w-md p-3 bg-yellow-500 rounded-lg shadow hover:bg-gray-100 mb-[20vh]">
+        <Icon name="simple-icons:unity" class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800"/>
+        <p class="font-bold text-base tracking-normal text-slate-700"> Senior Developer for simulation team. Worked on distributed rendering, test automation framework. Tool developer for Pixyz Software team</p>
+    </a>
 </FloatingText>
 
-<FloatingText m = "25vw">
-    Aversan: Aviation
+
+<FloatingText>
+    <p class = "floatText ml-10 mt-[20vh] tracking-wide">
+        General Motors - Automotive
+    </p>
+</FloatingText>
+<FloatingText moving="true" >
+    <a class="floatTextMoveL block mt-[10vh] max-w-md p-3 bg-yellow-500 rounded-lg shadow hover:bg-gray-100 mb-[20vh]">
+        <Icon name="simple-icons:generalmotors" class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800"/>
+        <p class="font-bold text-base tracking-normal text-slate-700"> Software engineer in Infortainment system. Worked on automation framework and integration of testing hardware and software of vehicles</p>
+    </a>
 </FloatingText>
 
+<FloatingText ml = "25vw">
+    <p class = "floatText pl-10 mt-[20vh]  tracking-wide">
+        Aversan - Aviation
+    </p>
+</FloatingText>
+<FloatingText moving="true" >
+    <a class="floatTextMoveL mt-[10vh] max-w-md p-3 bg-yellow-500 rounded-lg shadow hover:bg-gray-100 mb-[20vh]">
+        <Icon name="aversan" class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800 w-16"/>
+        <p class="font-bold text-base tracking-normal text-slate-700"> Software engineer for various contract projects. Worked as code review for aviation software to pass certification. Built network and system analytic tools. Automated test for healthcare software</p>
+    </a>
+</FloatingText>
+
+</div>
 <script>
 
-    const cards = document.querySelectorAll(".floatText, .floatTextMove");
-    const rootmargin_height = screen.height *0.2
+    const cards = document.querySelectorAll(".floatText, .floatTextMoveR, .floatTextMoveL");
+    const rootmargin_height = screen.height *0.1
     let observer_option = {
         threshold: 0,
         rootMargin: `-${rootmargin_height}px`,
@@ -53,3 +85,29 @@ import FloatingText from "../components/FloatingText.astro"
 
 </script>
 
+
+
+<style>
+    .floatTextMoveL.show,
+    .floatTextMoveR.show,
+    .floatText.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+    .floatText {
+        opacity: 0.1;
+        transition: 2s;
+    }
+
+    .floatTextMoveL {
+        transform: translateX(20vw);
+        opacity: 0.1;        
+        transition: 2s;
+    }
+    .floatTextMoveR {
+        transform: translateX(-20vw);
+        opacity: 0.1;        
+        transition: 2s;
+    }
+</style>

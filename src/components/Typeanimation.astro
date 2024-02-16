@@ -25,23 +25,24 @@ var elem = document.querySelector('#typing') as HTMLElement;
 var cursor = document.querySelector('#cursor') as HTMLElement;
 
 let text = elem.getAttribute('type-text')
-let speed = Number(elem.getAttribute('type-speed'))
+let speed = elem.getAttribute('type-speed')
+
+if(text == null){ text = ""}
+if(speed == null){ speed = "1000"}
 
 typing(text, speed)
 
-
-
-function typing(text:string, speed:Number, i=0){
+function typing(text:string, speed:string, i=0){
     if (i<text.length){
         elem.textContent += text[i];
-        setTimeout(()=>typing(text,speed, i+1), speed)
+        setTimeout(()=>typing(text,speed, i+1), Number(speed))
     }else{
         cursor.remove()
     }
 }
 
-function deleting(text,speed, time){
+// function deleting(text,speed, time){
 
-}
+// }
 
 </script>

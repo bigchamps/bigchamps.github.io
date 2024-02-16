@@ -4,7 +4,7 @@ import SidebarIcon from "../components/SidebarIcon.astro"
 
 <div id="sidebar" class="sb fixed bottom-4 min-w-full flex justify-center z-10">
     <div class="bottom-4 flex rounded-full  bg-stone-900 bg-opacity-70 text-white shadow-lg">
-        <SidebarIcon href="#hero" icon="ic:baseline-home" text="Home 🏠" />
+        <SidebarIcon href="#" icon="ic:baseline-home" text="Home 🏠" />
         <SidebarIcon icon="ic:baseline-notifications-active" text="Current Project 🔧"/>
         <SidebarIcon icon="ic:baseline-forum" text="Blog 📖"/>
         <SidebarIcon icon="ic:baseline-person" text="Profile"/>
@@ -12,11 +12,3 @@ import SidebarIcon from "../components/SidebarIcon.astro"
     </div>
 </div>
 
-<script>
-    var sidebar = document.querySelector('#sdf') as HTMLElement;
-    if(sidebar){
-        sidebar.style.visibility = "visible"
-        sidebar.classList.add("slideInAnimation")
-    }
-    
-</script>

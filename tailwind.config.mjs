@@ -9,8 +9,11 @@ export default {
 
         extend: {
             colors: {
-                primary: '',
-                secondary: '',
+                atomic_1: '#f79256',
+                atomic_2: '#fbd1a2',
+                atomic_3: '#7dcfb6',
+                atomic_4: '#00b2ca',
+                atomic_5: '#1d4e89',
             },
             fontSize: {
                 'myname': ['3rem', {

@@ -4,6 +4,7 @@ import Main from '../components/Main.astro';
 import Hero from "../components/Hero.astro";
 import Profile from "../components/Profile.astro";
 import Blank from "../components/Blank.astro";
+import Skills from "../components/Skills.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -13,14 +14,14 @@ import { Icon } from "astro-icon/components";
 
         <Blank height = 10vh />
         <div class="flex justify-center">
-            <Icon name="scroll" class="size-10 md:size-14 text-gray-700 animate-bounce absolute bottom-9 " />
+            <Icon name="scroll" class="size-10 md:size-14 text-gray-700 animate-bounce absolute bottom-[10vh] md:bottom-[5vh]  xl:bottom-[10vh]" />
         </div>
-        
+        <Blank height = 10vh />
         <Profile/>
         <Blank height = 30vh />
-        <Main/>
+        <Skills />
+        <Blank height = 30vh />
         
-
 </Layout>
 
 <style>

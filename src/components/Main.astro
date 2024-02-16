@@ -6,10 +6,10 @@ import Typing from "./Typeanimation.astro";
 
 
 
-<div class="flex flex-col gap-1 items-start">
+<div class="flex flex-row gap-5 items-start flex-wrap">
 
 
-    <div class="observe-card text-lg">9 years experiences</div>
+    <div class="observe-card">9 years experiences</div>
     <div class="observe-card">asadlfkjasldfj</div>
     <div class="observe-card">asadlfkjasldfj</div>
     <div class="observe-card">asadlfkjasldfj</div>
@@ -42,18 +42,18 @@ import Typing from "./Typeanimation.astro";
 <style>
 
     .observe-card.show {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 
     .observe-card {
-        opacity: 0;
+        opacity: 0.1;
         border: 1px solid black;
         border-radius: 0.25rem;
-        transform: translateX(100px);
+        transform: translateY(-100px);
         background: white;
         padding: 0.5rem;
-        transition: 500ms;
+        transition: 1s;
     }
 </style>
 
@@ -69,6 +69,7 @@ import Typing from "./Typeanimation.astro";
             entries.forEach((entry) => {
 
                 entry.target.classList.toggle("show", entry.isIntersecting);
+                console.log(entry.isIntersecting)
 
             });
         },
