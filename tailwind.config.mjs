@@ -62,7 +62,7 @@ export default {
                 typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
                 'spin-slow': 'spin 3s linear infinite',
                 blinking: 'blink .2s infinite',
-                'wiggle-2': 'wiggle 1s linear 5'
+                'wiggle-2': 'wiggle 1s linear 3'
             }
         },
         
