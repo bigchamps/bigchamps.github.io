@@ -10,3 +10,7 @@
         >
             Start
         </button>
+
+
+line-md:gauge-loop
+line-md:arrow-close-left

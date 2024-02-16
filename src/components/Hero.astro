@@ -6,16 +6,16 @@ import Animation from "../components/Animation.astro";
 
 <div
     id="hero"
-    class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white m-4 text-base items-end"
+    class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-atomic_6 m-4 text-base items-end"
 >
     <div class="grid-cols-subgrid col-span-1 row-span-2 grid-flow-row-dense ">
-        <p class="text-sky-500 animate-wiggle-2 ">Hello 👋 my name is</p>
+        <p class=" animate-wiggle-2 ">Hello 👋 my name is</p>
         <Typeanimation
             speed="150"
             text="Hoang Dang"
-            custom_class="font-bold text-myname-sm sm:text-myname text-sky-200 font-quirlycues"
+            custom_class="font-bold text-myname-sm sm:text-myname text-atomic_3 font-quirlycues"
         />
-        <p class="font-bold text-3xl text-sky-500">
+        <p class="font-bold text-3xl">
             I build software solution and automate things <Icon
                 name="ic:baseline-settings"
                 class="size-10 inline animate-spin-slow "
@@ -38,37 +38,71 @@ import Animation from "../components/Animation.astro";
 
         <Icon
             name="line-md:chevron-triple-down"
-            class="size-20 md:size-24 2xl:size-28 text-gray-400 animate-pulse"
+            class="size-20 md:size-24 2xl:size-28 text-atomic_2 animate-pulse"
         />
+        <button id="dark_light_switch">
+            <div id="icon_dark_light">
+                <Icon
+                    name="line-md:sunny-outline-to-moon-alt-loop-transition"
+                    class="size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-atomic_2 transition-all duration-300 ease-linear"
+                />
+            </div>
+            <div id="icon_dark_light2" class="hidden">
+                <Icon
+                    name="line-md:moon-to-sunny-outline-transition"
+                    class="size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-atomic_2 transition-all duration-300 ease-linear"
+                />
+            </div>
+        </button>
+        <Icon name="line-md:gauge-loop" class="size-20 md:size-24 2xl:size-28 text-gray-700" />
+        <a href={"https://github.com/bigchamps/bigchamps.github.io"}>
         <Icon
-            name="line-md:sunny-outline-to-moon-alt-loop-transition"
-            class="size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-gray-400 transition-all duration-300 ease-linear"
-        />
-        <Icon name="line-md:arrow-close-left" class="size-20 md:size-24 2xl:size-28 text-gray-700" />
-        <Icon
-            name="line-md:gauge-loop"
-            class="size-20 md:size-24 2xl:size-28 text-gray-700"
-        />
-        <Icon name="line-md:github-loop" class="top size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-gray-400 transition-all duration-300 ease-linear" />
+            name="ri:linkedin-line"
+            class="size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-atomic_2 "
+        /></a>
+        <a href={"https://github.com/bigchamps/bigchamps.github.io"}>
+        <Icon name="line-md:github-loop" class="top size-20 md:size-24 2xl:size-28 text-gray-700 hover:text-atomic_2 transition-all duration-300 ease-linear"/>
+        </a>
         <Icon
             name="line-md:arrow-right"
             class="size-20 md:size-24 2xl:size-28 text-gray-700"
         />
+        <a href="https://www.buymeacoffee.com/hndang">
         <Icon
             name="line-md:coffee-half-empty-twotone-loop"
-            class="size-20 md:size-24 2xl:size-28 text-gray-700"
+            class="size-20 md:size-24 2xl:size-28 text-gray-700  hover:text-atomic_2"
         />
+    </a>
         <Icon
             name="line-md:chevron-triple-up"
             class="size-20 md:size-24 2xl:size-28 text-gray-700"
-            href={"https://github.com/bigchamps/bigchamps.github.io"}
+            
         />
         
     </div>
 </div>
 
-<style>
-    .haslink { 
-
-    }
-</style>
+<script>
+    const dark_light_switch = document.querySelector("#dark_light_switch") as HTMLButtonElement;
+    const icon_dl = document.querySelector("#icon_dark_light") as HTMLElement;
+    const icon_dl2 = document.querySelector("#icon_dark_light2") as HTMLElement;
+    const parent = document.querySelector("#parent") as HTMLElement;
+    let isDark = true; 
+    console.log(icon_dl);
+    console.log(icon_dl2);
+        
+        
+    dark_light_switch.onclick = () => {
+        if (isDark){
+            icon_dl.style.display = "none";
+            icon_dl2.style.display = "inline";
+            isDark = false;
+        }
+        else{
+            icon_dl2.style.display = "none";
+            icon_dl.style.display = "inline";
+            isDark = true;
+        }
+        
+    };
+</script>

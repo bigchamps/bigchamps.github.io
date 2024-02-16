@@ -14,6 +14,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/line-md": "^1.1.36",
+    "@iconify-json/ri": "^1.1.19",
     "@iconify-json/simple-icons": "^1.1.91",
     "astro": "^4.3.6",
     "astro-icon": "^1.1.0",

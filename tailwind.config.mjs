@@ -2,6 +2,7 @@
 export default {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     theme: {
+        darkMode: 'class',
         fontFamily: {
             quirlycues: ["Quirlycues", "sans-serif"],
             ain: ["AiN", "sans-serif"],
@@ -9,11 +10,14 @@ export default {
 
         extend: {
             colors: {
-                atomic_1: '#f79256',
-                atomic_2: '#fbd1a2',
-                atomic_3: '#7dcfb6',
-                atomic_4: '#00b2ca',
-                atomic_5: '#1d4e89',
+                atomic_1: '#3d5a80 ',
+                atomic_2: '#98c1d9 ',
+                atomic_3: '#e0fbfc ',
+                atomic_4: '#ee6c4d',
+                atomic_5: '#293241',
+                atomic_6: '#219ebc',
+                atomic_7: '#8ecae6',
+                atomic_8: '#ffb703',
             },
             fontSize: {
                 'myname': ['3rem', {
