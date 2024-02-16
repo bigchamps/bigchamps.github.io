@@ -8,17 +8,17 @@ import Animation from "../components/Animation.astro";
     id="hero"
     class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white m-4 text-base items-end"
 >
-    <div class="grid-cols-subgrid col-span-1 row-span-2 grid-flow-row-dense">
-        <p class="text-sky-500 animate-wiggle-2">Hello 👋 my name is</p>
+    <div class="grid-cols-subgrid col-span-1 row-span-2 grid-flow-row-dense ">
+        <p class="text-sky-500 animate-wiggle-2 ">Hello 👋 my name is</p>
         <Typeanimation
             speed="150"
             text="Hoang Dang"
-            custom_class="font-bold text-myname text-sky-200 font-quirlycues"
+            custom_class="font-bold text-myname-sm sm:text-myname text-sky-200 font-quirlycues"
         />
         <p class="font-bold text-3xl text-sky-500">
             I build software solution and automate things <Icon
                 name="ic:baseline-settings"
-                class="size-10 inline animate-spin-slow"
+                class="size-10 inline animate-spin-slow "
             />
             <div class="rounded-full">
                 <object

@@ -16,7 +16,12 @@ export default {
                 'myname': ['3rem', {
                     lineHeight: '5rem',
                     letterSpacing: '-0.01em',
-                    fontWeight: '500',
+                    fontWeight: '600',
+                }],
+                'myname-sm': ['2.5rem', {
+                    lineHeight: '3rem',
+                    letterSpacing: '-0.01em',
+                    fontWeight: '400',
                 }],
                 'floating': ['3rem', {
                     lineHeight: '3.5rem',
@@ -57,12 +62,13 @@ export default {
                 typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
                 'spin-slow': 'spin 3s linear infinite',
                 blinking: 'blink .2s infinite',
-                'wiggle-2': 'wiggle 1s linear 2'
+                'wiggle-2': 'wiggle 1s linear 5'
             }
         },
         
     },
     plugins: [
         require('@tailwindcss/typography'),
+        require("tailwindcss-animation-delay"),
     ],
 }
