@@ -4,12 +4,18 @@ import Main from '../components/Main.astro';
 import Hero from "../components/Hero.astro";
 import Profile from "../components/Profile.astro";
 import Blank from "../components/Blank.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="Hoang Dang" >
 
         <Hero />
+
         <Blank height = 10vh />
+        <div class="flex justify-center">
+            <Icon name="scroll" class="size-10 md:size-14 text-gray-700 animate-bounce absolute bottom-9 " />
+        </div>
+        
         <Profile/>
         <Blank height = 30vh />
         <Main/>
