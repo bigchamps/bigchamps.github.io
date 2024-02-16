@@ -21,7 +21,12 @@ export default {
                 'floating': ['3rem', {
                     lineHeight: '3.5rem',
                     letterSpacing: '0.2em',
-                    fontWeight: '500',
+                    fontWeight: '600',
+                }],
+                'floating-sm': ['2rem', {
+                    lineHeight: '2.3rem',
+                    letterSpacing: '0.1em',
+                    fontWeight: '400',
                 }],
             },
             keyframes: {

@@ -1,17 +1,26 @@
 ---
-const {text_size="3rem", m="0px"} = Astro.props
+const {text_size="3rem", m="0px", moving="false"} = Astro.props
 let m_mod = `margin-left:${m};`
+let options = "text-floating-sm sm:text-floating font-bold text-amber-600 my-[30vh]"
+if (moving == "false"){
+    options += " floatText"
+}else{
+    
+    options += " floatTextMove"
+}
+console.log(options)
 
 ---
 
 
-<div  class="floatText text-floating font-bold text-amber-600 my-36" style={m_mod}>
+<div  class={options} style={m_mod}>
     <slot />
 </div>
 
 
 <style>
-
+     
+    .floatTextMove.show,
     .floatText.show {
             transform: translateX(0);
             opacity: 1;
@@ -19,8 +28,14 @@ let m_mod = `margin-left:${m};`
 
     .floatText {
         opacity: 0;
-        transform: translateX(500px);
         padding: 0.5rem;
+        transition: 2s;
+    }
+
+    .floatTextMove {
+        opacity: 0;
+        padding: 0.5rem;
+        transform: translateX(20vw);
         transition: 2s;
     }
 </style>

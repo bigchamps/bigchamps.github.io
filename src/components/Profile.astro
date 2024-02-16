@@ -9,7 +9,7 @@
 import FloatingText from "../components/FloatingText.astro"
 ---
 
-<FloatingText>
+<FloatingText moving="true">
     Software engineer
 </FloatingText>
 
@@ -20,20 +20,21 @@ import FloatingText from "../components/FloatingText.astro"
     Unity: Gaming
 </FloatingText>
 
-<FloatingText m = "40vw">
+<FloatingText m = "0vw">
     General Motors: Automotive
 </FloatingText>
 
-<FloatingText m = "30vw">
+<FloatingText m = "25vw">
     Aversan: Aviation
 </FloatingText>
 
 <script>
 
-    const cards = document.querySelectorAll(".floatText");
+    const cards = document.querySelectorAll(".floatText, .floatTextMove");
+    const rootmargin_height = screen.height *0.2
     let observer_option = {
         threshold: 0,
-        rootMargin: "-120px",
+        rootMargin: `-${rootmargin_height}px`,
     }
     const observer = new IntersectionObserver(
         (entries) => {
