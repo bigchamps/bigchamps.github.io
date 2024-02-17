@@ -63,16 +63,24 @@ export default {
                     '0%, 100%': { transform: 'rotate(0)' },
                     '25%': { transform: 'rotate(3deg)' },
                     '75%': { transform: 'rotate(-3deg)' }
-                  }
+                  },
+                  popIn: {
+                    '0%' :{ transform: 'scale(0)' },
+                    '90%': { transform: 'scale(1.1)'},                
+                    '100%': {transform: 'scale(1)'}
+                }
             },
             animation: {
                 typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
                 'spin-slow': 'spin 3s linear infinite',
                 blinking: 'blink .2s infinite',
                 'wiggle-2': 'wiggle 1s linear 3',
-                'pulse-bounce': 'pulse 10s linear infinite, bounce 2s infinite'
+                'pulse-bounce': 'pulse 10s linear infinite, bounce 2s infinite',
+                'popIn': 'popIn 1s ease-in-out',
             }
         },
+
+        
         
     },
     plugins: [

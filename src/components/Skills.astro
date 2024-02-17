@@ -1,21 +1,91 @@
 ---
 import { Icon } from "astro-icon/components";
+import FloatingText from "../components/FloatingText.astro"
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-3 rounded-3xl bg-atomic_1 m-10">
-    <div class="flex flex-col items-center">
-        <Icon name="simple-icons:unity" class="pb-3 size-20 md:size-24 2xl:size-28 "/>
-        <Icon name="simple-icons:unity" class="pb-3 size-20 md:size-24 2xl:size-28 "/>
-        <Icon name="simple-icons:unity" class="pb-3 size-20 md:size-24 2xl:size-28 "/>
+
+<div class="bg-atomic_1 m:2 sm:m-10 p-4 sm:p-10 font-bold rounded-3xl min-h-fit">
+    <h1 class="text-3xl m-2 text-atomic_8 mt-[5vh] mb-5 ">Languagues</h1>
+    <div class="flex flex-row items-center gap-1 flex-wrap">
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Python</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">C#</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Kotlin</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Java</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">C</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">C++</p>
     </div>
-    <div class="flex flex-col items-center">
-        <Icon name="simple-icons:unity" class="pb-3 size-20 md:size-24 2xl:size-28 "/>
+    <h1 class="text-3xl m-2 text-atomic_8 mt-[10vh]  mb-5">Framework</h1>
+    <div class="flex flex-row items-center gap-1 flex-wrap">
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">PostgresSQL</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">FastAPI</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Jenkins</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Selenium</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Grafana</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Redis</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">FastAPI</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Docker</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">GCP</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">AWS</p>
     </div>
-    <div class="flex flex-col items-center">
-        <Icon name="simple-icons:unity" class="pb-3 size-20 md:size-24 2xl:size-28 "/>
+    <h1 class="text-3xl m-2 text-atomic_8 mt-[10vh]  mb-5">Others</h1>
+    <div class="flex flex-row flex-wrap items-center gap-1">
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Homelab server</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">3d Printing</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">AI model training</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Embedded programming</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Electrical circuit design</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">3d modeling</p>
+        <p class="observe-card bg-atomic_5 text-atomic_7 shadow-lg">Web design</p>
+        
     </div>
     
-
-
-
+    <div class="mb-[5vh]"></div>
 </div>
+
+
+<style>
+
+    .observe-card.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .observe-card {
+        text-align: center;
+        cursor: pointer;
+        opacity: 0;
+        min-width: 4rem;
+        min-height: 2rem;
+        border-radius: 0.7rem;
+        transform: translateY(-100px);
+        padding: 0.5rem;
+        transition: 1s;
+        
+    }
+</style>
+
+<script>
+
+    const cards = document.querySelectorAll(".observe-card");
+    let observer_option = {
+        threshold: 0,
+    }
+    let delay = 0.2;
+    let current = true;
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle("show", entry.isIntersecting);
+                entry.target.style.transitionDelay = `${delay}s`;
+                delay += 0.1
+            });
+            delay = 0.2;
+        },
+        observer_option
+
+    );
+    cards.forEach((card) => {
+        observer.observe(card);
+    });
+
+</script>

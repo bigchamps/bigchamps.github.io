@@ -6,94 +6,160 @@
 // Fullstack
 // Android dev
 // Game dev
-import FloatingText from "../components/FloatingText.astro"
+import FloatingText from "../components/FloatingText.astro";
 import { Icon } from "astro-icon/components";
+import Skills from "../components/Skills.astro";
+import Project from "../components/Project.astro";
 ---
-<div id="profile" >
-<FloatingText>
-    <p class = "floatTextMoveL pl-10 my-[20vh]">
-        Software engineer
-    </p>
-</FloatingText>
 
-<FloatingText>
-    <p class = "floatText pl-[10vw] my-[20vh]">9 years experiences</p>
-</FloatingText>
+<div id="profile">
+    <FloatingText>
+        <p class="floatTextMoveL pl-10 my-[20vh]">Software engineer</p>
+    </FloatingText>
 
+    <FloatingText>
+        <p class="floatText pl-[10vw] my-[20vh]">9 years experiences</p>
+    </FloatingText>
 
-<FloatingText>
-    <p class = "floatText pl-[40vw] mt-[20vh] tracking-wide">
-        Unity - Gaming
-    </p>
-    
-</FloatingText>
-<FloatingText moving="true"  >
-    <a class="floatTextMoveR mt-[10vh] ml-3 sm:ml-[70vh]  max-w-md p-3 bg-atomic_3 rounded-lg shadow hover:bg-gray-100 mb-[20vh]">
-        <Icon name="simple-icons:unity" class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800"/>
-        <p class="font-bold text-base tracking-normal text-slate-700"> Senior Developer for simulation team. Worked on distributed rendering, test automation framework. Tool developer for Pixyz Software team</p>
-    </a>
-</FloatingText>
+    <FloatingText>
+        <p class="floatText pl-[40vw] mt-[20vh] tracking-wide text-atomic_8">
+            Unity - Gaming
+        </p>
+    </FloatingText>
+    <FloatingText moving="true">
+        <a
+            class="floatTextMoveR mt-[10vh] ml-3 sm:ml-[70vh] max-w-md p-3 bg-atomic_3 rounded-lg shadow hover:bg-gray-100 mb-[20vh]"
+        >
+            <Icon
+                name="simple-icons:unity"
+                class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800"
+            />
+            <p class="font-bold text-base tracking-normal text-slate-700">
+                Senior Developer for simulation team. Worked on distributed
+                rendering, test automation framework. Tool developer for Pixyz
+                Software team
+            </p>
+        </a>
+    </FloatingText>
 
+    <FloatingText>
+        <p class="floatText ml-10 mt-[20vh] tracking-wide text-atomic_8">
+            General Motors - Automotive
+        </p>
+    </FloatingText>
+    <FloatingText moving="true">
+        <a
+            class="floatTextMoveL block mt-[10vh] max-w-md p-3 bg-atomic_3 rounded-lg shadow hover:bg-gray-100 mb-[20vh]"
+        >
+            <Icon
+                name="simple-icons:generalmotors"
+                class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800"
+            />
+            <p class="font-bold text-base tracking-normal text-slate-700">
+                Software engineer in Infortainment system. Worked on automation
+                framework and integration of testing hardware and software of
+                vehicles
+            </p>
+        </a>
+    </FloatingText>
 
-<FloatingText>
-    <p class = "floatText ml-10 mt-[20vh] tracking-wide">
-        General Motors - Automotive
-    </p>
-</FloatingText>
-<FloatingText moving="true" >
-    <a class="floatTextMoveL block mt-[10vh] max-w-md p-3 bg-atomic_3 rounded-lg shadow hover:bg-gray-100 mb-[20vh]">
-        <Icon name="simple-icons:generalmotors" class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800"/>
-        <p class="font-bold text-base tracking-normal text-slate-700"> Software engineer in Infortainment system. Worked on automation framework and integration of testing hardware and software of vehicles</p>
-    </a>
-</FloatingText>
+    <FloatingText ml="25vw">
+        <p class="floatText pl-10 mt-[20vh] tracking-wide text-atomic_8">
+            Aversan - Aviation
+        </p>
+    </FloatingText>
+    <FloatingText moving="true">
+        <a
+            class="floatTextMoveL mt-[10vh] max-w-md p-3 bg-atomic_3 rounded-lg shadow hover:bg-gray-100 mb-[20vh]"
+        >
+            <Icon
+                name="aversan"
+                class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800 w-16"
+            />
+            <p class="font-bold text-base tracking-normal text-slate-700">
+                Software engineer for various contract projects. Worked as code
+                review for aviation software to pass certification. Built
+                network and system analytic tools. Automated test for healthcare
+                software
+            </p>
+        </a>
+    </FloatingText>
 
-<FloatingText ml = "25vw">
-    <p class = "floatText pl-10 mt-[20vh]  tracking-wide">
-        Aversan - Aviation
-    </p>
-</FloatingText>
-<FloatingText moving="true" >
-    <a class="floatTextMoveL mt-[10vh] max-w-md p-3 bg-atomic_3 rounded-lg shadow hover:bg-gray-100 mb-[20vh]">
-        <Icon name="aversan" class="pb-3 size-20 md:size-24 2xl:size-28 text-gray-800 w-16"/>
-        <p class="font-bold text-base tracking-normal text-slate-700"> Software engineer for various contract projects. Worked as code review for aviation software to pass certification. Built network and system analytic tools. Automated test for healthcare software</p>
-    </a>
-</FloatingText>
+    <FloatingText>
+        <p class="floatTextMoveL mt-[20vh] mb-[5vh]">Technical skills</p>
+    </FloatingText>
+    <Skills />
+
+    <FloatingText>
+        <p class="floatTextMoveL mt-[20vh] mb-[5vh]">Current Projects</p>
+    </FloatingText>
+    <Project />
+
+    <FloatingText>
+        <p class="floatText mt-[20vh] mb-[5vh]">It's the end ?! 😨</p>
+    </FloatingText>
+
+    <FloatingText>
+        <p class="floatTextMoveL mt-[20vh] mb-[5vh]">
+            Don't worry! More will be added 😁
+        </p>
+    </FloatingText>
+
+    <div class="fles justify-center">
+        <div
+            id="funfact"
+            class=" inline cursor-pointer max-w-fit min-h-fit leading-8 bg-gray-800 hover:bg-atomic_1 text-atomic_7 font-bold py-2 px-4 h-11 border-b-4 border-atomic_5 hover:border-atomic_5 rounded-xl"
+        >
+            Funfact!
+            <span id="funfact-text" class="hidden text-atomic_2">
+                I have always avoid web development but it's been fun designing and
+                coding this site
+            </span>
+        </div>
+
+    </div>
 
 </div>
-<script>
 
-    const cards = document.querySelectorAll(".floatText, .floatTextMoveR, .floatTextMoveL");
-    const rootmargin_height = screen.height *0.1
+<script>
+    const cards = document.querySelectorAll(
+        ".floatText, .floatTextMoveR, .floatTextMoveL",
+    );
+    const rootmargin_height = screen.height * 0.1;
     let observer_option = {
         threshold: 0,
         rootMargin: `-${rootmargin_height}px`,
-    }
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-
-                entry.target.classList.toggle("show", entry.isIntersecting);
-
-            });
-        },
-        observer_option
-
-    );
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+        });
+    }, observer_option);
     cards.forEach((card) => {
         observer.observe(card);
     });
 
+    import { typing } from "../scripts/typewrite.ts";
+
+    const tFunfact = document.querySelector("#funfact-text") as HTMLElement;
+    const bFunfact = document.querySelector("#funfact") as HTMLElement;
+    let isClick = false;
+    bFunfact.onclick = () => {
+        if (!isClick) {
+            tFunfact.style.display = "inline";
+            typing(tFunfact, 50);
+            isClick = !isClick;
+        }
+    };
 </script>
-
-
 
 <style>
     .floatTextMoveL.show,
     .floatTextMoveR.show,
     .floatText.show {
-            transform: translateX(0);
-            opacity: 1;
-        }
+        transform: translateX(0);
+        opacity: 1;
+    }
 
     .floatText {
         opacity: 0;
@@ -102,12 +168,12 @@ import { Icon } from "astro-icon/components";
 
     .floatTextMoveL {
         transform: translateX(20vw);
-        opacity: 0;        
+        opacity: 0;
         transition: 2s;
     }
     .floatTextMoveR {
         transform: translateX(-20vw);
-        opacity: 0;        
+        opacity: 0;
         transition: 2s;
     }
 </style>

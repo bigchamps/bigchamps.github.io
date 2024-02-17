@@ -1,0 +1,21 @@
+---
+
+import Typeanimation from "./Typeanimation.astro";
+import { Image } from "astro:assets";
+import chatbotImg from "../media/chat-bot.gif"
+---
+
+
+<div class="flex flex-col gap-3">
+
+<div class=" grid grid-col-1 m-2 sm:grid-cols-2" >
+    <div class="text-atomic_8 m-2"> <h2 class="text-4xl p-3">Ai chat bot for language learning</h2>
+        <p class="text-atomic_2 text-lg"> I developed this project with FastAPI backend and vanilla js frontend. The LLM model is with chatGPT and the voice models are a mixed of several model</p>
+        <p class="text-atomic_2 text-lg"> Check out the <a class="font-bold" href="https://chatdemo.hoangdang.dev/"> DEMO</a> ! 🤖</p>
+    </div>
+    <div>
+        <Image src={chatbotImg} alt="Project: AI Chat bot language learning" />
+
+    </div>
+       
+</div>
