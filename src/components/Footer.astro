@@ -1,9 +1,35 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
+<div id="contact" class="flex w-full justify-center items-center gap-4">
+    <hr
+        class="w-48 md:w-96 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
+    />
+    <a href="https://github.com/hndang">
+        <Icon
+            name="simple-icons:github"
+            class="size-10 md:size-12 text-atomic_2 hover:text-black transition-all duration-300 ease-linear"
+        />
+    </a>
+    <a href="https://www.linkedin.com/in/hndang/">
+        <Icon
+            name="simple-icons:linkedin"
+            class="size-10 md:size-12 text-atomic_2 hover:text-blue-600 transition-all duration-300 ease-linear"
+        />
+    </a>
+    <a href="mailto:hoangdang.eng@gmail.com">
+        <Icon
+            name="simple-icons:gmail"
+            class="size-10 md:size-12 text-atomic_2 hover:text-red-500 transition-all duration-300 ease-linear"
+        />
+    </a>
+    <hr
+        class="w-48 md:w-96 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
+    />
+</div>
 
-<div class="flex w-full justify-center gap-4 text-atomic_4">
-    <p> Created by Hoang Dang </p>
-    <p> ©️ 2024</p>
+<div class="flex mt-2 w-full justify-center gap-4 text-atomic_4">
+    <p>Created by Hoang Dang</p>
+    <p>©️ 2024</p>
 </div>
